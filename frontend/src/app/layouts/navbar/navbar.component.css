@@ -1,0 +1,20 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.site-title {
+    margin: 0 0.5rem;
+}
+
+.site-logo {
+    margin-left: 6px;
+}
+
+.mat-toolbar.mat-primary {
+    background: #1a2040;
+}
+
+.navbar-item {
+    margin-top: 4px;
+    margin-left: 2rem;
+}

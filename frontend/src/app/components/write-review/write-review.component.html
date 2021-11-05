@@ -1,0 +1,41 @@
+<div class = "game-details-content">
+    <div class = "card-container">
+        <div class="image">
+            <img [src]="game.imageUrl" alt="game.title"/>
+        </div>
+        <div>
+            <form [formGroup]="reviewForm">
+                <div class="form-input">
+                    <mat-error *ngIf="reviewInvalid">
+                        Rating and review are reuired
+                    </mat-error>
+                    <mat-form-field appearance="fill" >
+                        <div class="form-input">
+                            <mat-label>Star Rating</mat-label>
+                            <mat-select [(value)]="selected" name="rating" class="rating" id="rating" matNativeControl required formControlName="rating">
+                                <mat-option>Make a selection</mat-option>
+                                <mat-option value="1">&#9733; &#9734; &#9734; &#9734; &#9734;</mat-option>
+                                <mat-option value="2">&#9733; &#9733; &#9734; &#9734; &#9734;</mat-option>
+                                <mat-option value="3">&#9733; &#9733; &#9733; &#9734; &#9734;</mat-option>
+                                <mat-option value="4">&#9733; &#9733; &#9733; &#9733; &#9734;</mat-option>
+                                <mat-option value="5">&#9733; &#9733; &#9733; &#9733; &#9733;</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="reviewForm.hasError('required')">
+                                Rating is required
+                            </mat-error>
+                        </div>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="outline" >
+                        <textarea matInput name="review" class="review" id="review" formControlName="review" required rows="10" cols="150">
+                        </textarea>
+                    </mat-form-field>
+                    <mat-error *ngIf="reviewForm.hasError('required')">
+                        Review is required
+                    </mat-error>
+                </div>
+            </form>
+        </div>
+        <a mat-raised-button (click)="submit()" class="submit-review">Submit Review</a>
+    </div>
+</div>

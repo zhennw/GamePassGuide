@@ -1,0 +1,55 @@
+<div class="login-container">
+    <div class="login-form">
+        <form [formGroup]="enrollForm">
+            <h2 class="title">Sign Up
+                <mat-divider></mat-divider>
+            </h2>
+            <div class="form-input">
+                <mat-error *ngIf="enrollInvalid">
+                    Unable to register, please verify all entries
+                  </mat-error>
+
+                  <mat-form-field appearance="outline">
+                    <input matInput type="fname" placeholder="First Name" formControlName="fname" required>
+                    <mat-error>
+                      Please provide a valid first name
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <input matInput type="lname" placeholder="Last Name" formControlName="lname" required>
+                    <mat-error>
+                      Please provide a valid last name
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <input matInput type="username" placeholder="Username" formControlName="username" required>
+                    <mat-error>
+                      Please provide a valid username
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <input matInput type="email" placeholder="Email" formControlName="email" required>
+                    <mat-error>
+                      Please provide a valid email address
+                    </mat-error>
+                  </mat-form-field>
+        
+                  <mat-form-field appearance="outline">
+                      <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon class="password-visibility-icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                      <mat-error>
+                          Please provide a valid password
+                      </mat-error>
+                    </mat-form-field>
+
+                    <button mat-raised-button class="enroll-button" (click)="enroll()" color="primary">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+

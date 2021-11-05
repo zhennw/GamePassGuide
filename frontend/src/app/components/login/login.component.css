@@ -1,0 +1,77 @@
+.login-container {
+    background-image: url("/assets/images/login-page-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    width: 350px;
+    height: 450px;
+    background-color: transparent;
+    box-shadow: 0 5px 30px black;
+    padding: 2rem;
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+}
+
+:host::ng-deep .mat-form-field-underline {
+    background-color: white !important;;
+}
+:host::ng-deep .mat-form-field-ripple {
+    background-color: white !important;
+}
+
+:host::ng-deep .mat-form-field-wrapper {
+    margin-bottom: 2rem;
+}
+
+:host::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+}
+
+
+.title {
+    color: white;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.mat-divider {
+    border-top-color: white;
+    margin-top: 1rem;
+}
+
+.password-visibility-icon {
+    color: white;
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-input input{
+    color: white;
+}
+
+.form-input ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+  
+  .form-input :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  .form-input ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+  .login-button{
+      margin-top: 2rem;
+  }

@@ -1,0 +1,70 @@
+<div class="wrapper">
+    <h1 class="carousel-title">Featured <strong>Games</strong></h1>
+    <owl-carousel-o [options]="customOptions">
+
+        <ng-container *ngFor="let slide of featuredGames">
+            <ng-template class="slide" carouselSlide [id]="'slide.id'">
+                <img [src]="slide.imageUrl" [alt]="slide.id" [title]="slide.id"
+                    style="width:800px; height:600px; margin: 1rem auto;">
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>
+
+<div class="site-contents">
+    <!-- Recently Added Games -->
+    <div class="recent-game-cards-container" fxLayout="column" fxLayoutAlign="center center">
+        <div class="listing">
+            <div class="listing-head">
+                <h1 class="listing-title"><strong>Recenlty</strong> Added</h1>
+            </div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="game-cards" fxLayout="row wrap" fxLayoutGap="16px" fxLayoutAlign="flex-start"
+            fxLayout.lt-sm="column">
+            <div class="card" *ngFor="let game of recentlyAddedGames">
+                <a href="#">
+                    <img class="img1" [src]="game.imageUrl" />
+                    <div class="title">{{game.title}}</div>
+                    <!-- <div class="text">Available From: {{game.availableDate}}</div> -->
+                    <div class="text">Available Until: {{game.availableEnd}}</div>
+                    <div class="xbox-category" *ngIf="game.isXbox">xBox</div>
+                    <div class="pc-category" *ngIf="game.isPc">PC</div>
+                </a>
+            </div>
+            <button *ngIf="recentlyAddedGames && recentlyAddedGames.length > 0" mat-stroked-button
+                class="view-more-button" [routerLink]="'/games'" matTooltip="View More">
+                <mat-icon>arrow_forward_ios</mat-icon>
+            </button>
+        </div>
+    </div>
+    <!-- End Recently Added Games -->
+
+    <!-- Trending Games -->
+    <div class="trending-game-cards-container" fxLayout="column" fxLayoutAlign="center center">
+        <div class="listing">
+            <div class="listing-head">
+                <h1 class="listing-title">Trending <strong>Games</strong></h1>
+            </div>
+        </div>
+        <mat-divider class="divider"></mat-divider>
+        <div class="game-cards" fxLayout="row wrap" fxLayoutGap="16px" fxLayoutAlign="flex-start"
+            fxLayout.lt-sm="column">
+            <div class="card" *ngFor="let game of trendingGames">
+                <a href="#">
+                    <img class="img1" [src]="game.imageUrl" />
+                    <div class="title">{{game.title}}</div>
+                    <div class="text">Available Until: {{game.availableEnd}}</div>
+                    <div class="xbox-category" *ngIf="game.isXbox">xBox</div>
+                    <div class="pc-category" *ngIf="game.isPc">PC</div>
+                </a>
+            </div>
+            <button *ngIf="trendingGames && trendingGames.length > 0" mat-stroked-button class="view-more-button"
+                [routerLink]="'/games'" matTooltip="View More">
+                <mat-icon>arrow_forward_ios</mat-icon>
+            </button>
+        </div>
+    </div>
+    <!-- End Trending Games -->
+</div>
+<app-footer></app-footer>

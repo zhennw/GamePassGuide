@@ -1,0 +1,54 @@
+<div class="search-game" fxLayout="row" fxLayoutAlign="space-between center">
+    <div>
+        <h1 class="page-title">All {{title | titlecase}} Games</h1>
+    </div>
+    <mat-form-field appearance="outline" class="search-input">
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search By Game Title" #input>
+        <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+</div>
+<!--End Search Field-->
+<div class="site-content">
+    <mat-divider></mat-divider>
+    <div class="cards-container" fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="start center">
+        <!--image card layout start-->
+        <div class="container" *ngFor="let game of obs | async">
+            <!--image row start-->
+            <div class="row">
+                <!--image card start-->
+                <div class="image">
+                    <img [src]="game.imageUrl" alt="game.title">
+                    <div class="details">
+                        <h2><span>{{game.title}}</span></h2>
+                        <!-- <p>Game is available: {{game.availableDate}} - {{game.availableEnd}}</p> -->
+                        <div class="more">
+                            <!-- <a href="#" class="read-more">Find <span>Details</span></a> -->
+                            <a mat-button (click)="getGameDetails(game.id)" class="read-more">details</a>
+                            <div class="icon-links">
+                                <a href="#" matTooltip="Share">
+                                    <mat-icon class="share-icon">share</mat-icon>
+                                </a>
+                                <a href="#" matTooltip="Notify Me">
+                                    <mat-icon class="notify-icon">notification_add</mat-icon>
+                                </a>
+                                <a href="#" matTooltip="Add To Favorites">
+                                    <mat-icon class="favorite-icon">favorite</mat-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--image card end-->
+            </div>
+            <!--image row end-->
+        </div>
+        <!--image card layout end-->
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <mat-paginator [length]="games?.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page">
+    </mat-paginator>
+    <mat-divider></mat-divider>
+</div>

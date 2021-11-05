@@ -1,0 +1,80 @@
+
+.details-container {
+	background-color: #101326;
+	display: flex;
+}
+
+.details {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* :host::ng-deep mat-tabheader {
+	  background-color: #333d72;
+  } */
+
+  
+  
+    .game-banner {
+      height: 442px;
+      overflow: hidden;
+	}
+	.game-banner-img {
+        width: 100%;
+      }
+
+	  .details-wrapper {
+		max-width: 900px;
+		margin: 20px auto;
+		position: relative;
+	  }
+  
+	  .game-content {
+      text-align: center;
+      position: relative;
+      top: -200px;
+    }
+  
+		.game-header-title {
+        font-size: 70px;
+        color: #fff;
+        font-weight: 700;
+        line-height: 70px;
+        white-space: nowrap;
+      }
+  
+      .game-header-release-date {
+        color: #fff;
+        font-weight: 700;
+      }
+  
+	  .game-header-genres {
+        color: #fff;
+        font-weight: 700;
+      }
+
+	  .game-tabs {
+		background: rgb(37 45 86 / 61%);
+		color: #fff;
+		text-align: left;
+		padding: 10px;
+	  }
+
+	  :host::ng-deep .mat-tab-labels {
+        justify-content: center;
+      }
+
+	  .game-platforms {
+		display: flex;
+		margin-bottom: 3rem;
+	  }
+
+	  .game-platform {
+		width: 16px;
+		margin-right: 10px;
+	  }
+
+	  .game-tab-inner {
+		  margin: 2rem;
+	  }

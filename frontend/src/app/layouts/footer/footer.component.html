@@ -1,0 +1,52 @@
+<footer class="footer">
+    <div fxLayout="row" fxLayoutAlign="space-between start" fxLayout.xs="column">
+        <div class="left-column" fxLayout="column" fxFlex="30" fxLayoutAlign="center start">
+            <div class="site-logo" fxLayout="row" fxLayoutAlign="center center">
+                <mat-icon class="site-logo">sports_esports</mat-icon>
+                <h3 class="mat-h3">Game Tracker</h3>
+            </div>
+
+            <div class="left-items-row" fxLayout="row" fxLayoutAlign="space-between start">
+                <div fxLayout="column" fxLayoutAlign="space-around stretch">
+                    <ul class="list-unstyled">
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Benefits</a></li>
+                        <li><a href="">Partners</a></li>
+                        <li><a href="">Team</a></li>
+                    </ul>
+                </div>
+                <div fxLayout="column">
+                    <ul class="list-unstyled">
+                        <li><a href="">Documentation</a></li>
+                        <li><a href="">Support</a></li>
+                        <li><a href="">Legal Terms</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="nav" fxLayout="row" fxLayoutAlign="space-between start">
+                <li class="nav-item"><a href="" class="nav-link pl-0"><fa-icon [icon]="faFacebook" size="2x"></fa-icon></a></li>
+                <li class="nav-item"><a href="" class="nav-link"><fa-icon [icon]="faTwitter" size="2x"></fa-icon></a></li>
+                <li class="nav-item"><a href="" class="nav-link"><fa-icon [icon]="faGithub" size="2x"></fa-icon></a></li>
+                <li class="nav-item"><a href="" class="nav-link"><fa-icon [icon]="faInstagram" size="2x"></fa-icon></a></li>
+            </ul>
+            <br>
+        </div>
+        <div class="right-column" fxLayout="column"  fxLayoutAlign="space-between start" >
+            <h3 class="mat-h3">Contact Us</h3>
+                <form [formGroup]="contactForm" class="contact-form">
+                    <div class="form-input" fxLayout="column" fxLayoutAlign="space-between center">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label class="mat-label">Enter Your Email</mat-label>
+                            <input matInput type="email" formControlName="email">
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label class="mat-label">Message</mat-label>
+                            <textarea matInput formControlName="body"></textarea>
+                        </mat-form-field>
+                        <button type="button" class="send-button" mat-stroked-button>Send</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</footer>

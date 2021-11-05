@@ -1,0 +1,60 @@
+<!-- <form #loginForm="ngForm">
+    <h2>Login</h2>
+    <div class="form-group">
+        <div class="userLoginForm" [class.has-error]="emailControl.invalid && emailControl.touched">
+            <label for="email" class="control-label">Email: </label> &nbsp;
+            <input required email type="email" name="email" id="email" 
+                [(ngModel)] = "email" #emailControl="ngModel"/> &nbsp;
+            <span class="help-block" *ngIf="emailControl.errors?.required && emailControl.touched">
+                Email is required &nbsp;
+            </span>
+            <span class="help-block" *ngIf="emailControl.errors?.email && emailControl.touched">
+                Email format is invalid &nbsp;
+            </span>
+        </div>
+        <br>
+        <div class="newUserForm" [class.has-error]="passwordControl.invalid && passwordControl.touched">
+            <label for="password" class="control-label">Password: </label> &nbsp;
+            <input required type="password" name="password" id="password" 
+                [(ngModel)] = "password" #passwordControl="ngModel"/> &nbsp;
+            <span class="help-block" *ngIf="passwordControl.invalid && passwordControl.touched">
+                Password is required &nbsp;
+            </span>
+        </div>
+    </div>
+    <br><br>
+    <button name="login" (click)="login()">Log In</button>
+    <br><br>
+</form> -->
+
+<div class="login-container">
+    <div class="login-form">
+        <form [formGroup]="loginForm">
+            <h2 class="title">Login
+                <mat-divider></mat-divider>
+            </h2>
+            <div class="form-input">
+                <mat-error *ngIf="loginInvalid">
+                    The username and password were not recognized
+                  </mat-error>
+                  <mat-form-field appearance="outline">
+                    <input matInput type="email" placeholder="Email" formControlName="email" required>
+                    <mat-error>
+                        Please provide a valid email address
+                    </mat-error>
+                  </mat-form-field>
+          
+                  <mat-form-field appearance="outline">
+                      <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon class="password-visibility-icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                      <mat-error>
+                          Please provide a valid password
+                      </mat-error>
+                    </mat-form-field>
+                    <button mat-raised-button class="login-button" (click)="login()" color="primary">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

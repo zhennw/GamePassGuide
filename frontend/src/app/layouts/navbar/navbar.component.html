@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+  <mat-icon class="site-logo">sports_esports</mat-icon>
+  <span class="site-title">Game Tracker</span>
+  <div class="navbar-item">
+    <a mat-button [routerLink]="'/home'">Home</a>
+    <a mat-button [routerLink]="'/games'">All Games</a>
+
+    <button mat-button [matMenuTriggerFor]="genreMenu">Genre <mat-icon>expand_more</mat-icon></button>
+    <mat-menu #genreMenu="matMenu">
+      <ng-container *ngFor="let genre of genres">
+        <a mat-menu-item (click)="dropDownClick('genres', genre)"> {{genre | titlecase}} </a>
+      </ng-container>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="platformMenu">Platform <mat-icon>expand_more</mat-icon></button>
+    <mat-menu #platformMenu="matMenu">
+      <ng-container *ngFor="let platform of platforms">
+        <a mat-menu-item (click)="dropDownClick('platforms', platform)"> {{platform | titlecase}} </a>
+      </ng-container>
+    </mat-menu>
+
+    <!-- <a mat-button [routerLink]="'/activities'"> Activities </a>
+      <a mat-button [routerLink]="'/create-activity'"> Create Activity </a> -->
+  </div>
+  <span class="example-spacer"></span>
+  <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button> -->
+
+  <div *ngIf="!loggedIn()">
+    <a mat-button [routerLink]="'/enroll'"> Register</a>
+    <a mat-button [routerLink]="'/login'"> Login </a>
+  </div>
+
+  <div *ngIf="loggedIn()">
+    <button mat-button [matMenuTriggerFor]="userMenu"><mat-icon>person</mat-icon></button>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item [routerLink]="'/profile'" >Profile</button>
+      <button mat-menu-item (click)="logout()" >Logout</button>
+    </mat-menu>
+  </div>
+
+  <!-- <a mat-button *ngIf="isLoggedIn" [routerLink]="'/profile'">
+    <mat-icon>person</mat-icon>
+  </a> -->
+</mat-toolbar>
