@@ -20,7 +20,7 @@ ng serve -o  <br />
 run backend backend with java  <br />
 oen web browser using port 4200  <br />
 <br />
-#List of features 
+# List of features 
 Display user profile <br />
 Display Game details <br />
 Display Games with images <br />
@@ -30,5 +30,5 @@ send email when favoriting a game <br />
 filter game through serach <br />
 
 <br />
-#Contributors<br />
+# Contributors<br />
 ZhenWen Wang , Diana Dinh-Andrus, Mharvinn Calitis,  Dhrubo T
