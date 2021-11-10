@@ -22,6 +22,6 @@ Password hashing <br />
 send email when favoriting a game <br />
 filter game through serach <br />
 
-
+<br />
 Contributors<br />
 ZhenWen Wang , Diana Dinh-Andrus, Mharvinn Calitis,  Dhrubo T
