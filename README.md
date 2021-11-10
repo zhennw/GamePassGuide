@@ -11,6 +11,9 @@ hibernate <br />
 Angular <br />
 Spring MVC <br />
 Spring Core <br />
+Spring AOP <br />
+Amazon Web Service  <br />
+PostgreSQL PostgreSQL
 <br />
 # Gettin started <br />
 Git clone https://github.com/zhennw/GamePassGuide.git <br />
