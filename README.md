@@ -11,10 +11,9 @@ hibernate <br />
 Angular <br />
 Spring MVC <br />
 Spring Core <br />
-Features 
+
 <br />
 List of features 
-
 Display user profile <br />
 Display Game details <br />
 Display Games with images <br />
