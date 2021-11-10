@@ -1,4 +1,4 @@
-PROJECT NAME 
+PROJECT NAME <br />
 GamePass Guide
 Project Description
 With the game tracker we sought to create a tool to help users find and keep track of games listed on the xbox game pass. With our application users will be able to search through the game pass library as well add games to their own user curated list to keep track of games they want to play. Users can also review games or read reviews from other users about the game to see if it’s something that they would like.
