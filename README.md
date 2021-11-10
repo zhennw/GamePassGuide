@@ -30,5 +30,5 @@ send email when favoriting a game <br />
 filter game through serach <br />
 
 <br />
-# Contributors <br />
+# Contributors 
 ZhenWen Wang , Diana Dinh-Andrus, Mharvinn Calitis,  Dhrubo T
