@@ -11,7 +11,8 @@ Angular <br />
 Spring MVC <br />
 Spring Core <br />
 Features 
-List of features ready and TODOs for future development <br />
+<br />
+List of features ready and TODOs for future development 
 
 Login and register <br />
 Password hashing <br />
