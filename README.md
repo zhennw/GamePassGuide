@@ -21,7 +21,7 @@ in Windows Console open directory for /frontend/  <br />
 npm i   <br />
 ng serve -o  <br />
 run backend backend with java  <br />
-oen web browser using port 4200  <br />
+open web browser using port 4200  <br />
 <br />
 # List of features 
 Display user profile <br />
